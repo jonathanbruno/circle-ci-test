@@ -27,6 +27,12 @@ jobs:
           key: bundle-dependencies-v1-{{ checksum "Gemfile.lock" }}
           paths:
             - ./vendor/bundle
+      - run:
+         name: Create and migrate database
+         command: bundle exec rake db:create db:schema:load --trace
+          environment:
+            RAILS_ENV: test
+            RACK_ENV: test
 
 workflows:
   build_and_deploy:
