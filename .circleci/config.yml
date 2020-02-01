@@ -35,7 +35,7 @@ jobs:
 
       - run:
          name: Create and migrate database
-         command: bundle exec rake db:create db:schema:load --trace
+         command: bundle exec rake db:create db:migrate
          environment:
            RAILS_ENV: test
            RACK_ENV: test
