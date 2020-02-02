@@ -11,6 +11,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rack-cors'
 gem 'bootsnap', require: false
 gem 'pg'
+gem 'rubocop', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
